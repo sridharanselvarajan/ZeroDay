@@ -1,0 +1,285 @@
+.timetable-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.timetable-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.timetable-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+}
+
+.timetable-error {
+    color: #ef4444;
+    background: #fee2e2;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timetable-form {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.timetable-form input,
+.timetable-form select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background: #f9fafb;
+    width: 100%;
+}
+
+.timetable-form input:focus,
+.timetable-form select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    outline: none;
+    background: #fff;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-end;
+    grid-column: 1 / -1;
+}
+
+.timetable-add-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+    flex: 1;
+}
+
+.timetable-add-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+}
+
+.timetable-add-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.timetable-cancel-btn {
+    background: #e2e8f0;
+    color: #2d3748;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.timetable-cancel-btn:hover:not(:disabled) {
+    background: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.timetable-cancel-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.timetable-list-title {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.timetable-entries-list {
+    margin-top: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.timetable-entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+}
+
+.timetable-entry:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.entry-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.entry-day {
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.entry-time {
+    color: #718096;
+}
+
+.entry-subject {
+    font-weight: 600;
+}
+
+.entry-location {
+    color: #718096;
+}
+
+.entry-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.timetable-edit-btn {
+    background: #fbbf24;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timetable-edit-btn:hover:not(:disabled) {
+    background: #f59e42;
+    transform: translateY(-2px);
+}
+
+.timetable-edit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.timetable-delete-btn {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timetable-delete-btn:hover:not(:disabled) {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+.timetable-delete-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.timetable-loading,
+.timetable-empty {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.timetable-login-message {
+    text-align: center;
+    padding: 2rem;
+    color: #4a5568;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timetable-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .timetable-entry {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .entry-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .entry-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}

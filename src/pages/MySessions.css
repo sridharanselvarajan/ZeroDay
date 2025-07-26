@@ -1,0 +1,193 @@
+.my-sessions-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my-sessions-container h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.my-sessions-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.sessions-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.08);
+}
+
+.sessions-section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.session-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08);
+    margin-bottom: 1.5rem;
+    padding: 1.8rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.session-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+}
+
+.session-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.8rem;
+}
+
+.session-card p {
+    margin: 0.5rem 0;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.session-card p b {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.session-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.session-actions button:first-child {
+    background: #667eea;
+    color: white;
+}
+
+.session-actions button:first-child:hover {
+    background: #5a6fd1;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.session-actions button:last-child {
+    background: #fed7d7;
+    color: #e53e3e;
+}
+
+.session-actions button:last-child:hover {
+    background: #feb2b2;
+    box-shadow: 0 4px 12px rgba(254, 178, 178, 0.3);
+}
+
+.session-actions button:only-child {
+    background: #48bb78;
+    color: white;
+}
+
+.session-actions button:only-child:hover {
+    background: #38a169;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.no-sessions {
+    color: #a0aec0;
+    font-style: italic;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+    background: #f7fafc;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+/* Status badges */
+.session-card p b[title="Status"] {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.session-card p b[title="Status"][data-status="Pending"] {
+    background-color: #feebc8;
+    color: #b7791f;
+}
+
+.session-card p b[title="Status"][data-status="Confirmed"] {
+    background-color: #c6f6d5;
+    color: #276749;
+}
+
+.session-card p b[title="Status"][data-status="Cancelled"] {
+    background-color: #fed7d7;
+    color: #9b2c2c;
+}
+
+.session-card p b[title="Status"][data-status="Completed"] {
+    background-color: #bee3f8;
+    color: #2c5282;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .my-sessions-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .session-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    button {
+        width: 100%;
+    }
+}

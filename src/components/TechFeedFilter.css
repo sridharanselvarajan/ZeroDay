@@ -1,0 +1,78 @@
+.tech-feed-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-group, .search-group {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .category-select, .search-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: white;
+  }
+  
+  .category-select {
+    appearance: none;
+    padding-right: 2.5rem;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1rem;
+  }
+  
+  .category-select:focus, .search-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .search-group {
+    display: flex;
+  }
+  
+  .search-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+  
+  .search-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .search-button svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  
+  @media (max-width: 640px) {
+    .tech-feed-filter {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .filter-group, .search-group {
+      min-width: 100%;
+    }
+  }

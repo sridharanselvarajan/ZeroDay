@@ -1,0 +1,195 @@
+.lost-found-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.lost-found-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+}
+
+.lost-found-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.item-card {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(102, 126, 234, 0.12);
+}
+
+.item-type-badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+}
+
+.item-type-lost {
+    background-color: #feebc8;
+    color: #dd6b20;
+}
+
+.item-type-found {
+    background-color: #c6f6d5;
+    color: #38a169;
+}
+
+.item-meta {
+    font-size: 0.95rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+.item-desc {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.item-image {
+    max-height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: zoom-in;
+    margin-top: 0.75rem;
+}
+
+.item-image:hover {
+    transform: scale(1.02);
+}
+
+.edit-form {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+
+.edit-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #f9fafb;
+}
+
+.edit-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    outline: none;
+    background: #fff;
+}
+
+.edit-file {
+    margin-bottom: 1rem;
+}
+
+.edit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin-right: 0.5rem;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+}
+
+.cancel-btn {
+    background: #e2e8f0;
+    color: #2d3748;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.action-buttons {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.item-card:hover .action-buttons {
+    opacity: 1;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,116 @@
+.navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.5rem 0;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 80%;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 1.3rem;
+    /* Remove background and extra padding for clean left alignment */
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    background: none;
+}
+
+.admin-badge {
+    animation: pulse 2s infinite;
+    background: #fffbe6;
+    color: #b7791f;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.logout-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+
+.logout-button:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.13);
+}

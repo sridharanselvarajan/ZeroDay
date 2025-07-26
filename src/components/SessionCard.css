@@ -1,0 +1,161 @@
+.session-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.session-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.session-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.session-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+}
+
+.session-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #4b5563;
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.detail-value {
+    color: #111827;
+    font-weight: 500;
+}
+
+.detail-value.with-avatar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.user-avatar.small {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+}
+
+.session-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+}
+
+.action-button.confirm {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.action-button.confirm:hover {
+    background-color: #2563eb;
+}
+
+.action-button.complete {
+    background-color: #10b981;
+    color: white;
+}
+
+.action-button.complete:hover {
+    background-color: #059669;
+}
+
+.action-button.cancel {
+    background-color: #f3f4f6;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.action-button.cancel:hover {
+    background-color: #fee2e2;
+}
+
+.action-button.review {
+    background-color: #8b5cf6;
+    color: white;
+}
+
+.action-button.review:hover {
+    background-color: #7c3aed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .session-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .session-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .action-button {
+        width: 100%;
+    }
+}
